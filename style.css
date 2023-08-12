@@ -1,0 +1,9 @@
+@font-face {
+    font-family: DelthaRegular;
+    src: url("fonts/DelthaRegular.ttf");
+}
+
+.brand-name{
+    font-family: DelthaRegular;
+    font-size:30px;
+}
