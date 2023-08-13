@@ -1,9 +1,65 @@
+body{
+    
+}
+
 @font-face {
     font-family: DelthaRegular;
     src: url("fonts/DelthaRegular.ttf");
+}
+
+.acard{
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.acard:hover{
+    box-shadow: 10px 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 .brand-name{
     font-family: DelthaRegular;
     font-size:30px;
 }
+
+.bg-gradient{
+    background-image: radial-gradient(circle at 120.71% 50%, #ffbea3 0, #ffb1aa 10%, #ffa4ae 20%, #ff96af 30%, #ff88ab 40%, #f879a4 50%, #d76b9a 60%, #bb6091 70%, #a15789 80%, #8c5082 90%, #7a4b7c 100%);
+}
+
+.c-white{
+    color:white;
+}
+
+.sub-text{
+    max-width:80%;
+    text-align:justify;
+}
+
+.tag{
+    background-image: linear-gradient(250deg, #d86cd8 0, #d86cd8 50%, #d86cd8 100%);
+}
+
+.title-text{
+    font-size:80px;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+

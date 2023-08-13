@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Dhinda Portofolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section class="hero is-white is-fullheight">
+    <section class="hero is-black is-fullheight bg-gradient" id="home">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <header class="navbar">
@@ -25,17 +25,17 @@
             </div>
             <div id="navbarMenuHeroC" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
+                <a class="navbar-item" href="#home">
                   Home
                 </a>
-                <a class="navbar-item">
-                  Work
+                <a class="navbar-item" href="#project">
+                  Projects
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#experience">
                   Experience
                 </a>
                 <span class="navbar-item">
-                  <a class="button is-white is-inverted">
+                  <a class="button is-black is-inverted" href="#contact">
                     <span>Contact</span>
                   </a>
                 </span>
@@ -47,21 +47,210 @@
     
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
-        <div class="container has-text-left">
-          <p class="title">
-            Halo, <br> <span style="font-size: 50px;">I'M Dhinda AMALIA KIFLIA</span>
+        <div class="container">
+          <p class="subtitle sub-text">Halo <span class="wave">👋</span>, It's Me</p>
+          <p class="title title-text">
+            DHINDA AMALIA KIFLIA
           </p>
-          <p class="subtitle">
-            Lulusan jurusan Sistem Informasi Universitas Andalas tahun 2023. Memiliki pengetahuan tentang algoritma, struktur data, database dan bahasa pemrograman (PHP dan Java). Pernah terlibat dalam beberapa projek pembuatan aplikasi sebelumnya.
+          <p class="subtitle sub-text">
+            Lulusan jurusan Sistem Informasi <a href="https://www.unand.ac.id/" style="color: yellow;">Universitas Andalas</a> tahun 2023. Memiliki pengetahuan tentang algoritma, struktur data, database dan bahasa pemrograman (PHP dan Java). 
+            Pernah terlibat dalam beberapa <a href="#project" style="color: yellow;">projek</a> pembuatan aplikasi sebelumnya.
           </p>
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
 
-  <section class="section">
-    <div class="container">
-      
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+
+      });
+    </script>
+
+    <section class="section" id="project">
+     <h1 class="title">My Projects</h1>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+                <div class="card tile is-child acard">
+                  <div class="card-image">
+                    <figure class="image is-4by4">
+                      <img src="images/seternak.png" alt="Placeholder image">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Seternak - Website</p>
+                        <p class="subtitle is-6">Website jual beli hasil ternak 🐔</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="card tile is-child acard">
+                <div class="card-image">
+                  <figure class="image is-4by4">
+                    <img src="images/disastertaweb.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Disaster - Website</p>
+                      <p class="subtitle is-6">Website pengelolaan data bencana untuk admin</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <div class="card tile is-child acard">
+                <div class="card-image">
+                  <figure class="image is-4by4">
+                    <img src="images/disastertamobile1.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Disaster - Mobile App</p>
+                      <p class="subtitle is-6">Aplikasi untuk perlaporan bencana &#128077;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <div class="card tile is-child acard">
+            <div class="card-image">
+              <figure class="image is-4by4">
+                <img src="images/raund1.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">Raund - Mobile App</p>
+                  <p class="subtitle is-6">Aplikasi pemesanan jasa travel 🚗</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="section bg-gradient" id="experience">
+    <h1 class="title c-white">My Experience</h1>
+    <div class="tile is-ancestor">
+      <div class="tile is-6 is-vertical is-parent">
+        <div class="tile is-child card">
+            <header class="card-header">
+              <p class="card-header-title">
+                UPT Remunerasi Universitas Andalas - Freelance
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Pembuatan REST API dengan bahasa PHP Framework Laravel (coding, debugging dan documentation)
+                <br>
+                <p>Mei 2023 - sekarang</p>
+                <div class="tags are-medium">
+                  <span class="tag is-primary">PHP</span>
+                  <span class="tag is-primary">GIT</span>
+                  <span class="tag is-primary">Laravel</span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="tile is-child card">
+          <header class="card-header">
+            <p class="card-header-title">
+              SETERNAK - Freelance
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Terlibat dalam pembuatan prototype aplikasi SETERNAK, coding dan debugging.
+              <br>
+              <p>Oktober - Desember 2021</p>
+              <div class="tags are-medium">
+                <span class="tag is-primary">PHP</span>
+                <span class="tag is-primary">CSS</span>
+                <span class="tag is-primary">Figma</span>
+                <span class="tag is-primary">Laravel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="tile is-child card" style="height: 50%;">
+          <header class="card-header">
+            <p class="card-header-title">
+              BPBD Provinsi Sumatera Barat - Internship
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Terlibat dalam analisis proses bisnis dan coding aplikasi logistik BPBD Provinsi Sumatera Barat.
+              <br>
+              <p>Januari - Februari 2021</p>
+              <div class="tags are-medium">
+                <span class="tag is-primary">PHP</span>
+                <span class="tag is-primary">CSS</span>
+                <span class="tag is-primary">Laravel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <footer class="section" id="contact">
+    <h1 class="title">Contact Me</h1>
+    <div class="content">
+      <p style="font-size: 25px; color: black;">
+        <a href="mailto:dhindakeep@gmail.com">📧dhindakeep@gmail.com</a>
+        <button class="button is-link" style="font-size: 20px;" href="https://www.linkedin.com/in/dhindakiflia/">Linkedin</button>
+      </p>
+    </div>
+  </section>
+  
   </body>
 </html>
