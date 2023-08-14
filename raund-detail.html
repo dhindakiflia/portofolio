@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dhinda Portofolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="hero is-black is-fullheight bg-gradient" id="home">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+          <header class="navbar">
+            <div class="container">
+              <div class="navbar-brand">
+                <a class="navbar-item">
+                  <p class="brand-name">DHINDA</p>
+                </a>
+                <span class="navbar-burger" data-target="navbarMenuHeroC">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenuHeroC" class="navbar-menu">
+                <div class="navbar-end">
+                  <a class="navbar-item" href="index.html#home">
+                    Home
+                  </a>
+                  <a class="navbar-item is-active" href="index.html#project">
+                    Project
+                  </a>
+                  <a class="navbar-item" href="index.html#experience">
+                    Experience
+                  </a>
+                  <span class="navbar-item">
+                    <a class="button is-black is-inverted" href="index.html#contact">
+                      <span>Contact</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+          <div class="container">
+            <p class="subtitle sub-text" style="color: yellow;">Mobile App</p>
+            <p class="title title-text">
+              RAUND
+            </p>
+            <p class="subtitle sub-text">
+                Merupakan aplikasi hasil dari tugas besar untuk mata kuliah Pemrograman Teknologi Bergerak. 
+                Dalam pengerjaan tugas besar ini, saya dan teman-teman satu kelompok membuat aplikasi Raund yang merupakan aplikasi 
+                pemesanan travel. Pada aplikasi ini terdapat berbagai macam perusahaan penyedia jasa travel. Sehingga, user dapat 
+                memilih travel mana yang akan digunakan dan tempat tujuan yg diinginkan. Aplikasi ini juga menyediakan map untuk menentukan 
+                tempat penjemputan dan tempat tujuan. Keterlibatan saya lebih banyak pada fitur yang berhubungan dengan Location Based Service.
+
+            </p>
+            <div class="tags are-medium">
+                <span class="tag is-primary">Figma</span>
+                <span class="tag is-primary">PHP</span>
+                <span class="tag is-primary">Java</span>
+            </div>
+
+            <figure class="image is-5by2.5">
+                <img src="images/raund2.png">
+            </figure>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+  
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+  
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+  
+          });
+        });
+  
+        });
+      </script>
+  </body>
+</html>
